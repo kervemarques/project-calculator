@@ -8,7 +8,7 @@
 
     <title>Projeto Calculadora</title>
   </head>
-  <body>
+  <body onkeydown="handleKeyDown(event)">
     <table>
       <tr>
         <th colspan="4"><input type="text" id="resultado" readonly></th>
@@ -17,28 +17,27 @@
         <th><button class="numeros" onclick="handleNumberClick(7)">7</button></th>
         <th><button class="numeros" onclick="handleNumberClick(8)">8</button></th>
         <th><button class="numeros" onclick="handleNumberClick(9)">9</button></th>
-        <th><button class="operadores" onclick="">/</button></th>
+        <th><button class="operadores" onclick="handleOperatorClick('/')">/</button></th>
       </tr>
       <tr>
-        <th><button class="numeros" onclick="">4</button></th>
-        <th><button class="numeros" onclick="">5</button></th>
-        <th><button class="numeros" onclick="">6</button></th>
-        <th><button class="operadores" onclick="">*</button></th>
+        <th><button class="numeros" onclick="handleNumberClick(4)">4</button></th>
+        <th><button class="numeros" onclick="handleNumberClick(5)">5</button></th>
+        <th><button class="numeros" onclick="handleNumberClick(6)">6</button></th>
+        <th><button class="operadores" onclick="handleOperatorClick('*')">*</button></th>
       </tr>
       <tr>
-        <th><button class="numeros" onclick="">1</button></th>
-        <th><button class="numeros" onclick="">2</button></th>
-        <th><button class="numeros" onclick="">3</button></th>
-        <th><button class="operadores" onclick="">-</button></th>
+        <th><button class="numeros" onclick="handleNumberClick(1)">1</button></th>
+        <th><button class="numeros" onclick="handleNumberClick(2)">2</button></th>
+        <th><button class="numeros" onclick="handleNumberClick(3)">3</button></th>
+        <th><button class="operadores" onclick="handleOperatorClick('-')">-</button></th>
       </tr>
       <tr>
-        <th><button id="botaoc" onclick="">C</button></th>
-        <th><button class="numeros" onclick="">0</button></th>
-        <th><button class="resultado" onclick="">=</button></th>
-        <th><button class="operadores" onclick="">+</button></th>
+        <th><button id="botaoc" onclick="handleClearClick()">C</button></th>
+        <th><button class="numeros" onclick="handleNumberClick(0)">0</button></th>
+        <th><button class="resultado" onclick="handleResultClick()">=</button></th>
+        <th><button class="operadores" onclick="handleOperatorClick('+')">+</button></th>
       </tr>
       
-
     </table>
     <script src="main.js"></script>
   </body>
