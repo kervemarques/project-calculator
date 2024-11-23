@@ -21,7 +21,7 @@ function handleNumberClick(n){
 /**
  funçao handleKeyDown faz a ligacao entre o teclado e os botoes da calculadora
  */
-function handleKeyDown(event) { //event.key: "event" eh a acao 
+function handleKeyDown(event) { //event.key: retorna a chave da tecla pressionada como uma string. Por exemplo, "a", "1", "Enter", etc. Foi previamente setado no html(linha 11) para o evento "onkeydown" que eh um objeto de evento que contém informações sobre o evento de pressionamento de uma tecla.
   const operadores = ['+', '-', '*', '/']
   if (event.key === 'Backspace' || event.key === 'Delete') {
     handleClearClick()
