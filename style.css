@@ -13,7 +13,7 @@ td {
 }
 
 input,button {
-  font-size: medium;
+  font-size: 24px;
   font-family: Andale Mono, monospace;
   width: 100%;
   height: 100%;
@@ -43,12 +43,10 @@ button:hover {
 
 .numeros:hover {
     background-color: #bedaf7;
-    color: white;
 }
 
 .numeros:active {
   background-color: rgb(202, 156, 202);
-  color: white;
 }
 
 .operadores {
@@ -80,9 +78,9 @@ button:hover {
 }
 
 #botaoc:hover {
-  background-color: #FFDAB9;
+  background-color: #f8b982;
 }
 
 #botaoc:active {
-  background-color: #FFDAB9;
+  background-color: #f79540;
 }

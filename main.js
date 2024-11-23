@@ -18,8 +18,24 @@ function handleNumberClick(n){
   updateDisplay(n)
 }
 
-function handleKeyDown(event) { //verificar se event.key e numero. Se for numero, chamar handleNumberClick(event.key)
-  if (handleClearClick)
+/**
+ funçao handleKeyDown faz a ligacao entre o teclado e os botoes da calculadora
+ */
+function handleKeyDown(event) { //event.key: "event" eh a acao 
+  const operadores = ['+', '-', '*', '/']
+  if (event.key === 'Backspace' || event.key === 'Delete') {
+    handleClearClick()
+  }
+  else if (event.key >= 0 && event.key <= 9) {
+    handleNumberClick(event.key)
+  }
+  else if (operadores.includes(event.key)) {
+    handleOperatorClick(event.key)
+  }
+  else if (event.key === 'Enter') {
+    handleResultClick()
+  }
+  
   console.log (event.key)
 }
 
